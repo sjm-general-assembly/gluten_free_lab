@@ -40,8 +40,8 @@ class Person
 					# binding.pry
 				@meal_number += 1
 				@stomach[@meal_number] = food
-				puts "#{self.to_s} just ate: #{@stomach[@meal_number]}" # wierdness. -accidentally removed the '@' before stomach, got strange results. line didn't print.
-			rescue
+				puts "#{self.to_s} just ate: #{@stomach[@meal_number]}" 
+			rescue AllergyError
 					# binding.pry
 				puts ("Whoa. Almost ate an allergen (#{@allergies}). So I purged. See my stomach is empty -> #{@stomach}")
 			end
